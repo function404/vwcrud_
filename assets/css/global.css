@@ -1,0 +1,138 @@
+/**
+   * Global CSS
+   * 
+   * This file contains the Global CSS of the website.
+   * 
+*/
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: #f4f4f4;
+}
+
+/* Footer*/
+footer {
+   text-align: center;
+   padding: 10px 0;
+   border-top: 2px solid #051E4F;
+}
+footer .container-links {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+footer .container-links .content-links {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+}
+footer .container-links .content-links img {
+   width: 128px;
+   height: 72px;
+   object-fit: cover;
+}
+footer .container-links .content-links p a {
+   font-size: 20px;
+   color: #646464;
+   font-weight: 700;
+   text-decoration: none;
+   transition: all .5s ease-in-out;
+}
+footer .container-links .content-links p a:hover {
+   color: #051E4F;
+   transition: all .5s ease-in-out;
+}
+footer .container-links .content-links i {
+   font-size: 18px;
+   color: #646464;
+}
+footer .content-visible-mobile {
+   display: none;
+   visibility: hidden;
+}
+
+footer .container-devs {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   margin-top: 24px;
+}
+footer .container-devs p {
+   font-size: 16px;
+   color: #646464;
+}
+footer .container-devs p a {
+   color: #051E4F;
+   text-decoration: none;
+   transition: all .5s ease-in-out;
+}
+footer .container-devs p a:hover {
+   color: #646464;
+   transition: all .5s ease-in-out;
+}
+
+footer .copyright {
+   margin-top: 24px;
+   font-size: 14px;
+   color: #646464;
+}
+
+@media screen and (max-width: 768px) {
+   footer .container-links {
+      flex-direction: column;
+      gap: 20px;
+   }
+   footer .container-links .content-visible-mobile {
+      display: flex;
+      visibility: visible;
+   }
+   footer .container-links .content-visible-mobile {
+      display: flex;
+      align-items: center;
+   }
+   footer .container-links .content-visible-mobile img {
+      width: 128px;
+      height: 72px;
+      object-fit: cover;
+   }
+   footer .container-links .content-visible-mobile .p-visible-mobile{
+      font-size: 20px;
+      color: #051E4F;
+      font-weight: 600;
+   }
+
+   footer .container-links .content-links {
+      flex-direction: row;
+   }
+   footer .container-links .content-links.logo-visble-web {
+      display: none;
+   }
+   footer .container-links .content-links p a {
+      font-size: 18px;
+   }
+   footer .container-links .content-links i {
+      font-size: 16px;
+   }
+
+   footer .container-devs {
+      flex-wrap: wrap;
+      padding: 0 30px;
+   }
+   footer .container-devs p {
+      font-size: 14px;
+   }
+
+   footer .copyright {
+      font-size: 12px;
+   }
+}
