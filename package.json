@@ -1,0 +1,17 @@
+{
+   "name": "vwcrud_",
+   "private": false,
+   "version": "1.0.0",
+   "description": "A simple CRUD application using php and mysql",
+   "main": "index.php",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "keywords": [
+      "php",
+      "mysql",
+      "crud"
+   ],
+   "author": "fepers | drypzz | function404",
+   "license": "MIT"
+}

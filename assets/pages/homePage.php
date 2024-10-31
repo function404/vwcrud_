@@ -7,10 +7,10 @@
 
 <?php include '../includes/header.php'?>
 
-<div>
+<main>
     <h1>Home page</h1>
     <h4>Hello World!</h4>
     <p>This is <b>Home</b> page!</p>
-</div>
+</main>
 
 <?php include '../includes/footer.php'?>

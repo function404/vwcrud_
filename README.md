@@ -2,9 +2,9 @@
 
 ## 📢 Informations
 
-- Vesion: 1.0.0
+- Vesion: 1.0.3
 
-- Last Update: 30 Out. 2024
+- Last Update: 31 Oct. 2024
 
 ## ℹ️ About Project
 
