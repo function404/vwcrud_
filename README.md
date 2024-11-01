@@ -2,9 +2,9 @@
 
 ## 📢 Informations
 
-- Vesion: 1.0.3
+- Vesion: 1.1.8
 
-- Last Update: 31 Oct. 2024
+- Last Update: 01 Nov. 2024
 
 ## ℹ️ About Project
 
@@ -13,5 +13,6 @@ Project carried out during the 2nd semester of ADS (Systems Analysis and Develop
 ## 🛠️ Tools Used
 
 - php
+- css
 - xampp
-
+- html
