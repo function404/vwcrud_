@@ -16,6 +16,92 @@ body {
    background-color: #f4f4f4;
 }
 
+
+/*CARD*/
+section {
+   display: flex;
+   flex-flow: column;
+   width: 100%;
+   --outside-margin: 8.33vw;
+}
+section .content-card {
+   display: block;
+   position: relative;
+}
+section .content-card .container-ul-card {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   scroll-snap-type: x mandatory;
+   overflow: scroll hidden;
+   gap: 16px;
+   padding: 0 8.33vw;
+   padding-inline-start: 8.33vw;
+   padding-inline-end: 8.33vw;
+   scrollbar-width: none; 
+}
+
+section .content-card .container-ul-card .content-ul-card {
+   pointer-events: auto;
+   opacity: 1;
+   min-height: 100%;
+   display: inline-block;
+   min-width: 33.333333333333336%;
+   max-width: 33.333333333333336%;
+   scroll-snap-align: center;
+   --separator-width: 0px;
+}
+
+section .content-card .container-ul-card .content-ul-card .container-li-card {
+   display: flex;
+   flex-direction: column;
+   overflow: visible;
+   list-style: none;
+   padding-bottom: 24px;
+}
+
+section .content-card .container-ul-card .content-ul-card .container-li-card .content-li-card {
+   cursor: pointer;
+}
+
+section .content-card .container-ul-card .content-ul-card .container-li-card .content-li-card .info-li-card {
+   display: flex;
+   flex-direction: column;
+   min-height: 175px;
+   margin-bottom: 120px;
+   padding: 8px 8px 0px;
+   border-radius: 0px;
+   background: rgb(90, 96, 100);
+   -webkit-box-pack: end;
+   justify-content: flex-end;
+}
+
+section .content-card .container-ul-card .content-ul-card .container-li-card .content-li-card .info-li-card .subinfo-li-card {
+   position: relative;
+   height: 100px;
+   display: flex;
+   -webkit-box-pack: center;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+section .content-card .container-ul-card .content-ul-card .container-li-card .content-li-card .info-li-card .subinfo-li-card .img-li-card {
+   pointer-events: none;
+   width: 375px;
+   max-width: 140%;
+   position: absolute;
+   top: -10px;
+}
+
+section .content-card .container-ul-card .content-ul-card .container-li-card .content-li-card .info-li-card .subinfo-li-card .img-li-card img {
+   display: block;
+   width: 100%;
+}
+
+
+
+
+
 /* Footer*/
 footer {
    text-align: center;
@@ -88,10 +174,17 @@ footer .copyright {
 }
 
 @media screen and (max-width: 768px) {
+
+   section .content-card .container-ul-card .content-ul-card {
+      min-width: calc(var(33.333333333333336%) + var(--separator-width) - 8px);
+      scroll-snap-align: start;
+      scroll-margin-inline-start: calc(var(--outside-margin) - var(--separator-width));
+   }
+
    footer .container-links {
       flex-direction: column;
       gap: 20px;
-   }
+   } 
    footer .container-links .content-visible-mobile {
       display: flex;
       visibility: visible;
