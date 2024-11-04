@@ -15,21 +15,41 @@
     <title>VW: Volkswagen | Sign Up</title>
 </head>
 <body>
-    <main>
-        <div>
-            <a href="homePage.php">
-                <img style="width: 72px; height: 72px;" src="../gfx/volkswagen-logo.png" alt="LOGO-VW">    
-            </a>
-        </div>
-        <div>
-            <h1>Sing Up page</h1>
-            <h4>Hello World!!</h4>
-            <p>This is <b>Sing Up</b> page!</p>
-        </div>
-        <div>
-            <p>Has a account,</p>
-            <a href="signInPage.php">Sign In!</a>
-        </div>
-    </main>
+    <header class="logo-top-form">
+        <a href="homePage.php">
+            <img src="../gfx/volkswagen-logo.png" alt="LOGO-VW">    
+        </a>
+    </header>
 
-<?php include '../includes/footer.php'?>
+    <main>
+        <section class="container-form">
+            <div class="content-form">
+                <h1>Sign Up</h1>
+                <p>Create an account at Volkswagen!</p>
+            </div>
+            <div class="content-form">
+                <form class="form" action="" method="POST">
+                    <div class="info-field-form">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="name" name="name" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="info-field-form">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
+                    </div>
+                    <div class="info-field-form">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Enter your e-mail" required>
+                    </div>
+                    <div class="info-field-form adm">
+                        <input type="checkbox" name="adm" id="adm" placeholder="I am an administrator" required>
+                        <label for="adm">I am an administrator</label>
+                    </div>
+                    <button class="btn-form" type="submit">Sign Up</button>
+                    <p>Have an account? <a href="signInPage.php">Sign In</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
