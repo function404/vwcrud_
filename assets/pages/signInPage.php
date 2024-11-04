@@ -15,21 +15,33 @@
     <title>VW: Volkswagen | Sign In</title>
 </head>
 <body>
-    <main>
-        <div>
-            <a href="homePage.php">
-                <img style="width: 72px; height: 72px;" src="../gfx/volkswagen-logo.png" alt="LOGO-VW">    
-            </a>
-        </div>
-        <div>
-            <h1>Sing In page</h1>
-            <h4>Hello World!!</h4>
-            <p>This is <b>Sign In</b> page!</p>
-        </div>
-        <div>
-            <p>Don't has a account,</p>
-            <a href="signUpPage.php">Sign Up!</a>
-        </div>
-    </main>
+    <header class="logo-top-form">
+        <a href="homePage.php">
+            <img src="../gfx/volkswagen-logo.png" alt="LOGO-VW">    
+        </a>
+    </header>
 
-<?php include '../includes/footer.php'?>
+    <main>
+        <section class="container-form">
+            <div class="content-form">
+                <h1>Sign In</h1>
+                <p>Connect to your account!</p>
+            </div>
+            <div class="content-form">
+                <form class="form" action="" method="POST">
+                    <div class="info-field-form">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email" name="email" id="email" placeholder="Your e-mail" required>
+                    </div>
+                    <div class="info-field-form">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Your password" required>
+                    </div>
+                    <button class="btn-form" type="submit">Sign In</button>
+                    <p>Don't have an account? <a href="signUpPage.php">Sign Up</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
