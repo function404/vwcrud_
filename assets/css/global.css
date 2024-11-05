@@ -64,6 +64,31 @@ main .container-form {
    background-color: var(--white);
    box-shadow: -4px 4px 2px 1px rgba(0, 0, 0, 0.4);
 }
+
+main .container-form .content-form .error{
+   width: 100%;
+   background-color: rgba(255, 0, 0, .1);
+}
+
+main .container-form .content-form .success{
+   width: 100%;
+   background-color: rgba(0, 255, 0, .1);
+}
+
+main .container-form .content-form .error p{
+   color: red;
+   font-size: 16px;
+   text-align: center;
+   padding: 10px;
+}
+
+main .container-form .content-form .success p{
+   color: green;
+   font-size: 16px;
+   text-align: center;
+   padding: 10px;
+}
+
 main .container-form .content-form h1 {
    display: flex;
    justify-content: center;

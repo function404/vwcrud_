@@ -28,24 +28,34 @@
                 <p>Create an account at Volkswagen!</p>
             </div>
             <div class="content-form">
+                <?php if (isset($_GET["error_"])) { ?>
+                <div id="error" class="error">
+                    <p><?= htmlspecialchars($_GET["message"]) ?></p>
+                </div>
+                <?php } ?>
+                <?php if (isset($_GET["success_"])) { ?>
+                <div id="success" class="success">
+                    <p><?= htmlspecialchars($_GET["message"]) ?></p>
+                </div>
+                <?php } ?>
                 <form class="form" action="./signUpPage.rules.php" method="POST">
                     <div class="info-field-form">
                         <i class="fa-solid fa-user"></i>
-                        <input type="name" name="name" id="name" placeholder="Enter your name" required>
+                        <input type="name" name="name" onclick="toggleInputs()" id="name" placeholder="Enter your name" required>
                     </div>
                     <div class="info-field-form">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
+                        <input type="email" name="email" id="email" onclick="toggleInputs()" placeholder="Enter your e-mail" required>
                     </div>
                     <div class="info-field-form">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                        <input type="password" name="password" onclick="toggleInputs()" id="password" placeholder="Enter your password" required>
                         <a class="toggle-password" type="button" onclick="togglePassword()" >
-                            <i id="toggle-icon" class="fa-solid fa-eye"></i>
+                            <i id="toggle-icon" class="fa-solid fa-eye-slash"></i>
                         </a>
                     </div>
                     <div class="info-field-form adm">
-                        <input type="checkbox" name="adm" id="adm" placeholder="I am an administrator">
+                        <input type="checkbox" name="adm" id="adm" onclick="toggleAdmin()">
                         <label for="adm">I am administrator</label>
                     </div>
                     <button class="btn-form" type="submit">Sign Up</button>
@@ -58,6 +68,6 @@
         </section>
     </main>
 
-    <script src='../../javascript/global.js'></script>
+    <script src="../../javascript/global.js"></script>
 </body>
 </html>
