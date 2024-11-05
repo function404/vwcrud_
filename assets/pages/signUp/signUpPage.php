@@ -39,7 +39,10 @@
                     </div>
                     <div class="info-field-form">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="password" id="password" placeholder="Enter your passeord" required>
+                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                        <a class="toggle-password" type="button" onclick="togglePassword()" >
+                            <i id="toggle-icon" class="fa-solid fa-eye"></i>
+                        </a>
                     </div>
                     <div class="info-field-form adm">
                         <input type="checkbox" name="adm" id="adm" placeholder="I am an administrator">
@@ -49,7 +52,12 @@
                     <p>Have an account? <a href="../signIn/signInPage.php">Sign In</a></p>
                 </form>
             </div>
+            <div class="btn-goback">
+                <a href="../home/homePage.php">Go back home</a>
+            </div>
         </section>
     </main>
+
+    <script src='../../javascript/global.js'></script>
 </body>
 </html>

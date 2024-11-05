@@ -31,17 +31,25 @@
                 <form class="form" action="" method="POST">
                     <div class="info-field-form">
                         <i class="fa-solid fa-user"></i>
-                        <input type="email" name="email" id="email" placeholder="Your e-mail" required>
+                        <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
                     </div>
                     <div class="info-field-form">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="password" id="password" placeholder="Your password" required>
+                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                        <a class="toggle-password" type="button" onclick="togglePassword()" >
+                            <i id="toggle-icon" class="fa-solid fa-eye"></i>
+                        </a>
                     </div>
                     <button class="btn-form" type="submit">Sign In</button>
                     <p>Don't have an account? <a href="../signUp/signUpPage.php">Sign Up</a></p>
                 </form>
             </div>
+            <div class="btn-goback">
+                <a href="../home/homePage.php">Go back home</a>
+            </div>
         </section>
     </main>
+
+    <script src='../../javascript/global.js'></script>
 </body>
 </html>

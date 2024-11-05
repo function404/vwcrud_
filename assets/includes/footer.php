@@ -12,7 +12,7 @@
                     <p class="p-visible-mobile">Volkswagen Das Auto</p>
                 </article>
                 <article class="content-links">
-                    <i class="fa-regular fa-comments"></i>
+                    <i class="fa-solid fa-comment"></i>
                     <p>
                         <a href="#">WhatsApp</a>
                     </p>
@@ -30,7 +30,7 @@
                 </article>
 
                 <article class="content-links">
-                    <i class="fa-regular fa-percent"></i>
+                    <i class="fa-solid fa-tags"></i>
                     <p>
                         <a href="#">Vehicle offers</a>
                     </p>
