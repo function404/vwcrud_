@@ -130,7 +130,7 @@ main .container-form .content-form .form button {
    height: 62px;
    font-size: 24px;
    color: var(--white);
-   background-color: var(--blue100 );
+   background-color: var(--blue200);
    border: none;
    outline: none;
    border-radius: 6px;
@@ -182,6 +182,7 @@ footer .container-links .content-links {
    justify-content: space-between;
    align-items: center;
    gap: 10px;
+   max-width: 100px;
 }
 footer .container-links .content-links img {
    width: 72px;
@@ -275,7 +276,10 @@ footer .copyright {
       * 
    */
    footer .container-links {
+      align-items: flex-start;
+      justify-content: flex-start;
       flex-direction: column;
+      padding: 0 30px;
       gap: 20px;
    }
    footer .container-links .content-visible-mobile {
@@ -300,6 +304,7 @@ footer .copyright {
 
    footer .container-links .content-links {
       flex-direction: row;
+      max-width: 100%;
    }
    footer .container-links .content-links.logo-visble-web {
       display: none;

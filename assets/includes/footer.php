@@ -8,8 +8,8 @@
         <footer>
             <section class="container-links">
                 <article class="content-visible-mobile">
-                    <img src="../gfx/volkswagen-logo.png" alt="LOGO-VW">
-                    <p class="p-visible-mobile">Volkswagen</p>
+                    <img src="../../gfx/volkswagen-logo.png" alt="LOGO-VW">
+                    <p class="p-visible-mobile">Volkswagen Das Auto</p>
                 </article>
                 <article class="content-links">
                     <i class="fa-regular fa-comments"></i>
@@ -26,7 +26,7 @@
                 </article>
 
                 <article class="content-links logo-visble-web">
-                    <img src="../gfx/volkswagen-logo.png" alt="LOGO-VW">
+                    <img src="../../gfx/volkswagen-logo.png" alt="LOGO-VW">
                 </article>
 
                 <article class="content-links">
