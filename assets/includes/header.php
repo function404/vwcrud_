@@ -15,4 +15,31 @@
     <title>VW: Volkswagen | Home</title>
 </head>
 <body>
+    <header>
+        <div class="HeaderContainer">
+            <div class="logo-header">
+                <a href="../pages/homePage.php">
+                    <image src="../gfx/volkswagen-logoW.png" alt="White logo">
+                </a>
+            </div>
+            <div class="menu-header">
+                <div class="searchHeader">
+                    <image src="../gfx/magnifyingGlassIcon.png" alt="Search Icon">
+                </div>
+                <div class="SideBarHeader">
+                    <image src="../gfx/sidebarIcon.png" alt="sidebar Icon">
+                </div>
+                <div class="SideBarHeader2">
+                    <image src="../gfx/sidebarIcon2.png" alt="sidebar Icon">
+                </div>
+            </div>
+        </div>
+        <div class="bottomHeader">
+            <div class="LineBefore"></div>
+                <div class="LogoReduced">
+                    <image src="../gfx/volkswagen-logoW.png" alt="White logo">
+                </div>
+            <div class="LineAfter"></div>
+        </div>
+    </header>
     <?php include 'menu.php'; ?>
