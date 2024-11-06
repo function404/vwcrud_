@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../gfx/volkswagen-logo.png" />
     <title>VW: Volkswagen | Sign In</title>
+
+    <?php
+        session_start();
+
+        if (isset($_SESSION['user']['adminUser']) === 1) {
+            header('Location: ../home/homePage.php');
+            exit();
+        };
+    ?>
+
 </head>
 <body>
     <header class="logo-top-form">
@@ -28,14 +38,24 @@
                 <p>Connect to your account!</p>
             </div>
             <div class="content-form">
-                <form class="form" action="" method="POST">
+                <?php if (isset($_GET["error_"])) { ?>
+                <div id="error" class="error">
+                    <p><?= htmlspecialchars($_GET["message"]) ?></p>
+                </div>
+                <?php } ?>
+                <?php if (isset($_GET["success_"])) { ?>
+                <div id="success" class="success">
+                    <p><?= htmlspecialchars($_GET["message"]) ?></p>
+                </div>
+                <?php } ?>
+                <form class="form" action="./signInPage.rules.php" method="POST">
                     <div class="info-field-form">
                         <i class="fa-solid fa-user"></i>
-                        <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
+                        <input type="email" name="email" id="email" placeholder="Enter your e-mail">
                     </div>
                     <div class="info-field-form">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                        <input type="password" name="password" id="password" placeholder="Enter your password">
                         <a class="toggle-password" type="button" onclick="togglePassword()" >
                             <i id="toggle-icon" class="fa-solid fa-eye"></i>
                         </a>

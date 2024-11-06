@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../gfx/volkswagen-logo.png" />
     <title>VW: Volkswagen | Sign Up</title>
+
+    <?php
+        session_start();
+
+        if (isset($_SESSION['user']['adminUser']) === 1) {
+            header('Location: ../home/homePage.php');
+            exit();
+        };
+    ?>
 </head>
 <body>
     <header class="logo-top-form">
@@ -41,15 +50,15 @@
                 <form class="form" action="./signUpPage.rules.php" method="POST">
                     <div class="info-field-form">
                         <i class="fa-solid fa-user"></i>
-                        <input type="name" name="name" onclick="toggleInputs()" id="name" placeholder="Enter your name" required>
+                        <input type="name" name="name" onclick="toggleInputs()" id="name" placeholder="Enter your name">
                     </div>
                     <div class="info-field-form">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" name="email" id="email" onclick="toggleInputs()" placeholder="Enter your e-mail" required>
+                        <input type="email" name="email" id="email" onclick="toggleInputs()" placeholder="Enter your e-mail">
                     </div>
                     <div class="info-field-form">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="password" onclick="toggleInputs()" id="password" placeholder="Enter your password" required>
+                        <input type="password" name="password" onclick="toggleInputs()" id="password" min="6" placeholder="Enter your password">
                         <a class="toggle-password" type="button" onclick="togglePassword()" >
                             <i id="toggle-icon" class="fa-solid fa-eye-slash"></i>
                         </a>

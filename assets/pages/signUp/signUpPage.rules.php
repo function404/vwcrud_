@@ -5,18 +5,17 @@
     *
 ] -->
 <?php 
-
     include '../../sql/pdo.php';
 
-    function notify($type, $message){
+    function notify($type, $message, $url){
         if ($type == 'error') {
-            header('Location: signUpPage.php?error_=1&message='.urlencode($message));
+            header('Location: '.$url.'.php?error_=1&message='.urlencode($message));
             exit();
         } else if ($type == 'success') {
-            header('Location: signUpPage.php?success_=1&message='.urlencode($message));
+            header('Location: '.$url.'.php?success_=1&message='.urlencode($message));
             exit();
         }else{
-            header('Location: signUpPage.php');
+            header('Location: '.$url.'.php');
             exit();
         }
     };
@@ -27,7 +26,12 @@
     $admin = isset($_POST['adm']) ? 1 : 0;
     
     if (empty($name) || empty($email) || empty($password)) {
-        notify('error', 'Please fill in all fields!');
+        notify('error', 'Please fill in all fields!', 'signUpPage');
+        exit();
+    };
+
+    if (strlen($password) < 6) {
+        notify('error', 'Password must have at least 6 characters!', 'signUpPage');
         exit();
     };
     
@@ -36,7 +40,7 @@
     $user = $query->fetch();
     
     if ($user) {
-        notify('error', 'Email already registered!');
+        notify('error', 'Email already registered!', 'signUpPage');
         exit();
     };
     
@@ -53,7 +57,21 @@
         password_hash($password, PASSWORD_DEFAULT),
         $admin
     ]);
+
+    session_start();
+
+    $_SESSION['user'] = [
+        'id' => $newId,
+        'name' => $name,
+        'email' => $email,
+        'admin' => $admin
+    ];
     
-    notify('success', 'User registered successfully!');
+    if ($admin === 1) {
+        header('Location: ../home/homePage.php');
+    } else {
+        notify('success', 'User registered successfully!', '../signIn/signInPage');
+    };
+
     exit();
 ?>
