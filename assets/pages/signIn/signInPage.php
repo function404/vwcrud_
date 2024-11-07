@@ -17,19 +17,18 @@
     <?php
         session_start();
 
-        if (isset($_SESSION['user']['admin']) === 1) {
+        if (isset($_SESSION['user']['logged'])) {
             header('Location: ../home/homePage.php');
             exit();
         };
     ?>
-
 </head>
 <body>
-    <header class="logo-top-form">
+    <section class="logo-top-form">
         <a href="../home/homePage.php">
             <img src="../../gfx/volkswagen-logo.png" alt="LOGO-VW">    
         </a>
-    </header>
+    </section>
 
     <main>
         <section class="container-form">

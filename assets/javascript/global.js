@@ -25,18 +25,15 @@ function togglePassword() {
  *
 */
 function toggleAdmin(){
-   
-   const admCheckbox = document.getElementById('adm');
-   const adminKey = prompt("Enter a key to continue:");
+   const keydiv = document.querySelector('#div-key');
+   const checkbox = document.querySelector('#adm-input');
 
-   if (adminKey === '40028922') {
-      admCheckbox.setAttribute('aria-checked', 'true');
-      admCheckbox.checked = true;
+   if (checkbox.checked) {
+      keydiv.style.display = 'block';
    } else {
-      admCheckbox.setAttribute('aria-checked', 'false');
-      admCheckbox.checked = false;
-      alert("You are not an admin");
+      keydiv.style.display = 'none';
    }
+   
 };
 
 
@@ -57,6 +54,11 @@ function toggleInputs(){
    }
 };
 
+
+/**
+ * Change navbar visibility
+ *
+*/
 function toggleNavbar() {
    const navbar = document.querySelector('.nav-header');
    const toggleMenu = document.querySelector('#burger-checkbox');

@@ -4,16 +4,40 @@
     * This file contains the menu of the website.
     *
 */ -->
+
+<?php
+    session_start();
+
+    if (isset($_GET['logout'])) {
+        unset($_SESSION['user']);
+        session_destroy();
+        header('Location: ../home/homePage.php');
+    };
+?>
+
 <div class="HeaderContainer">
     <div class="logo-header">
-        <a href="../pages/homePage.php">
+        <a href="../home/homePage.php">
             <image src="../../gfx/volkswagen-logoW.png" alt="White logo">
         </a>
     </div>
     <div class="menu-header">
         <div class="nav-header">
-            <a href="../pages/home/homePage.php"><i class="fa-solid fa-house"></i></a>
-            <a href="../pages/signIn/modelsPage.php"><i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="../home/homePage.php">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+            <?php
+                if (isset($_SESSION['user']['logged']) === true) {
+                    echo '<a href="?logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>';
+                } else {
+                    echo '<a href="../signIn/signInPage.php"><i class="fa-solid fa-user-large"></i>Sign In</a>';
+                };
+
+                if (isset($_SESSION['user']) && $_SESSION['user']['admin'] === 1) {
+                    echo '<a href="../dashboard/dashboardPage.php"><i class="fa-solid fa-gear"></i>Dashboard</a>';
+                };
+            ?>
         </div>
         <div class="SideBarHeader">
             <input id="burger-checkbox" type="checkbox" />

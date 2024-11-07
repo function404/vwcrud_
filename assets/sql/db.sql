@@ -25,3 +25,9 @@ CREATE TABLE vwcrud.users (
     adminUser BOOLEAN NOT NULL,
     PRIMARY KEY(idUser)
 );
+
+CREATE TABLE vwcrud.keys (
+	idKey INT(11) NOT NULL AUTO_INCREMENT,
+    `key` INT(6) NOT NULL,
+    PRIMARY KEY(idKey)
+);

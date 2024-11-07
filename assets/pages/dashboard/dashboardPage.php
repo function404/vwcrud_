@@ -1,17 +1,15 @@
 <?php 
     include '../../includes/header.php';
 
-    session_start();
-
-    if ($_SESSION['user']['admin'] === 0) {
+    if ($_SESSION['user']['admin'] === 0 || !isset($_SESSION['user'])) {
         header('Location: ../home/homePage.php');
         exit();
     };
 
     if(isset($_GET['logout'])){
-        header('location: ../home/homePage.php');
         unset($_SESSION['user']);
         session_destroy();
+        header('location: ../home/homePage.php');
     };
 ?>
 
@@ -63,9 +61,11 @@
             </div>
         </div>
     </div> -->
-    <?php if(isset($_SESSION['user'])): ?>
-        <a href="?logout">Deslogar</a>
-    <?php endif; ?>
+    <?php
+        if (isset($_SESSION['user'])) {
+            echo '<a href="?logout" class="logout">Logout</a>';
+        };
+    ?>
 </main>
 
 

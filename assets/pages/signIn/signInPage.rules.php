@@ -8,16 +8,11 @@
     include '../../sql/pdo.php';
 
     function notify($type, $message, $url){
-        if ($type == 'error') {
-            header('Location: '.$url.'.php?error_=1&message='.urlencode($message));
-            exit();
-        } else if ($type == 'success') {
-            header('Location: '.$url.'.php?success_=1&message='.urlencode($message));
-            exit();
-        }else{
-            header('Location: '.$url.'.php');
-            exit();
-        }
+        header("Location: {$url}.php?" . http_build_query([
+            $type . "_"=> 1,
+            'message' => $message
+        ]));
+        exit();
     };
 
     $email = trim($_POST['email']);
@@ -44,13 +39,15 @@
         'name' => $user['nameUser'],
         'email' => $user['emailUser'],
         'admin' => $user['adminUser'],
+        'logged' => true
     ];
 
     if ($user['adminUser'] === 1) {
         header('Location: ../dashboard/dashboardPage.php');
-    } else {
+        exit();
+    }else{
         header('Location: ../home/homePage.php');
-    };
+    }
 
     exit();
 ?>
