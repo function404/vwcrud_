@@ -13,39 +13,48 @@
                     </a>
                     <p class="p-visible-mobile">Volkswagen Das Auto</p>
                 </article>
-                <article class="content-links">
-                    <i class="fa-solid fa-comment"></i>
-                    <p>
-                        <a href="#">WhatsApp</a>
-                    </p>
-                </article>
 
-                <article class="content-links">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>
-                        <a href="#">Nearby dealerships</a>
-                    </p>
-                </article>
+                <div class="content-article-box">
+                    <article class="content-links">
+                        <i class="fa-solid fa-comment"></i>
+                        <p>
+                            <a href="#">WhatsApp</a>
+                        </p>
+                    </article>
+                </div>
 
-                <article class="content-links logo-visble-web">
-                    <a href="../home/homePage.php">
+                <div class="content-article-box">
+                    <article class="content-links">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>
+                            <a href="#">Nearby dealerships</a>
+                        </p>
+                    </article>
+                </div>
+
+                <div class="content-article-box logo-visble-web">
+                    <article class="content-links">
                         <img src="../../gfx/volkswagen-logo.png" alt="LOGO-VW">
-                    </a>
-                </article>
+                    </article>
+                </div>
 
-                <article class="content-links">
-                    <i class="fa-solid fa-tags"></i>
-                    <p>
-                        <a href="#">Vehicle offers</a>
-                    </p>
-                </article>
+                <div class="content-article-box">
+                    <article class="content-links">
+                        <i class="fa-solid fa-tags"></i>
+                        <p>
+                            <a href="#">Vehicle offers</a>
+                        </p>
+                    </article>
+                </div>
 
-                <article class="content-links">
-                    <i class="fa-solid fa-car"></i>
-                    <p>
-                        <a href="#">All models</a>
-                    </p>
-                </article>
+                <div class="content-article-box">
+                    <article class="content-links">
+                        <i class="fa-solid fa-car"></i>
+                        <p>
+                            <a href="#">All models</a>
+                        </p>
+                    </article>
+                </div>
             </section>
 
             <section class="container-devs">
