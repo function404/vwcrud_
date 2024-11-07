@@ -56,3 +56,18 @@ function toggleInputs(){
       success.style.display = 'none';
    }
 };
+
+function toggleNavbar() {
+   const navbar = document.querySelector('.nav-header');
+   const toggleMenu = document.querySelector('#burger-checkbox');
+   
+   if (navbar && toggleMenu) {
+      if (toggleMenu.checked) {
+         navbar.style.display = 'block';
+      } else {
+         navbar.style.display = 'none';
+      }
+   }
+}
+
+document.querySelector('#burger-checkbox').addEventListener('click', toggleNavbar);
