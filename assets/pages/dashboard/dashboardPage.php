@@ -22,98 +22,98 @@
     include './dashboardPages.rules.php';
 ?>
 
-<main>
-    <section class="titles">
-        <p class="dashboard-title">Admin Panel</p>
-        <div class="line"></div>
-        <p class="dashboard-subtitle">Dashboard</p>
-        <p class="dashboard-username">Welcome, <?php echo $_SESSION['user']['name'] ?? 'Administrator'; ?></p>
-        <div class="line"></div>
-    </section>
+    <main>
+        <section class="titles">
+            <p class="dashboard-title">Admin Panel</p>
+            <div class="line"></div>
+            <p class="dashboard-subtitle">Dashboard</p>
+            <p class="dashboard-username">Welcome, <?php echo $_SESSION['user']['name'] ?? 'Administrator'; ?></p>
+            <div class="line"></div>
+        </section>
 
-    <section class="dashboard-container">
-        <div class="dashboard-content">
-            
-            <div class='card usuarios large'>
-                <div class='box-icon-count'>
-                    <i class='fa-solid fa-user'></i>
-                    <p class='count'><?php echo $allusers; ?></p>
-                </div>
-                <div class='label'>Users</div>
-            </div>
-
-            <div class="container-card">
-                <div class="card consumidor small">
-                    <div class="box-icon-count">
-                        <i class="fa-solid fa-user"></i>
-                        <p class="count"><?php echo $consumers; ?></p>
+        <section class="dashboard-container">
+            <div class="dashboard-content">
+                
+                <div class='card usuarios large'>
+                    <div class='box-icon-count'>
+                        <i class='fa-solid fa-user'></i>
+                        <p class='count'><?php echo $allusers; ?></p>
                     </div>
-                    <div class="label">Consumer</div>
+                    <div class='label'>Users</div>
                 </div>
-                <div class="card administrador small">
-                    <div class="box-icon-count">
-                        <i class="fa-solid fa-user"></i>
-                        <p class="count"><?php echo $admins; ?></p>
-                    </div>
-                    <div class="label">Admin</div>
-                </div>
-            </div>
 
-            <div class="card modelos large">
-                <div class="box-icon-count">
-                    <i class="fa-solid fa-car"></i>
-                    <p class="count"><?php echo $allmodels; ?></p>
+                <div class="container-card">
+                    <div class="card consumidor small">
+                        <div class="box-icon-count">
+                            <i class="fa-solid fa-user"></i>
+                            <p class="count"><?php echo $consumers; ?></p>
+                        </div>
+                        <div class="label">Consumer</div>
+                    </div>
+                    <div class="card administrador small">
+                        <div class="box-icon-count">
+                            <i class="fa-solid fa-user"></i>
+                            <p class="count"><?php echo $admins; ?></p>
+                        </div>
+                        <div class="label">Admin</div>
+                    </div>
                 </div>
-                <div class="label">Models</div>
-            </div>
-            
-            <div class="container-card">
-                <div class="card hatch small">
+
+                <div class="card modelos large">
                     <div class="box-icon-count">
                         <i class="fa-solid fa-car"></i>
-                        <p class="count"><?php echo $hatch; ?></p>
+                        <p class="count"><?php echo $allmodels; ?></p>
                     </div>
-                    <div class="label">Hatch</div>
+                    <div class="label">Models</div>
                 </div>
-                <div class="card sedan small">
-                    <div class="box-icon-count">
-                        <i class="fa-solid fa-car"></i>
-                        <p class="count"><?php echo $sedan; ?></p>
+                
+                <div class="container-card">
+                    <div class="card hatch small">
+                        <div class="box-icon-count">
+                            <i class="fa-solid fa-car"></i>
+                            <p class="count"><?php echo $hatch; ?></p>
+                        </div>
+                        <div class="label">Hatch</div>
                     </div>
-                    <div class="label">Sedan</div>
-                </div>
-                <div class="card suv small">
-                    <div class="box-icon-count">
-                        <i class="fa-solid fa-car"></i>
-                        <p class="count"><?php echo $suv; ?></p>
+                    <div class="card sedan small">
+                        <div class="box-icon-count">
+                            <i class="fa-solid fa-car"></i>
+                            <p class="count"><?php echo $sedan; ?></p>
+                        </div>
+                        <div class="label">Sedan</div>
                     </div>
-                    <div class="label">SUV</div>
-                </div>
-                <div class="card pickup small">
-                    <div class="box-icon-count">
-                        <i class="fa-solid fa-car"></i>
-                        <p class="count"><?php echo $pickup; ?></p>
+                    <div class="card suv small">
+                        <div class="box-icon-count">
+                            <i class="fa-solid fa-car"></i>
+                            <p class="count"><?php echo $suv; ?></p>
+                        </div>
+                        <div class="label">SUV</div>
                     </div>
-                    <div class="label">Pickup</div>
+                    <div class="card pickup small">
+                        <div class="box-icon-count">
+                            <i class="fa-solid fa-car"></i>
+                            <p class="count"><?php echo $pickup; ?></p>
+                        </div>
+                        <div class="label">Pickup</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="tables-links-container">
-        <div class="tables-links-content">
-            <a class="tables-links-users" href="#">
-                <p>User Table</p>
-                <i class="fa-solid fa-chevron-right"></i>
-            </a> 
-        </div>
-        <div class="tables-links-content">
-            <a class="tables-links-models" href="#">
-                <p>Models Table</p>
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-        </div>
-    </section>
-</main>
+        <section class="tables-links-container">
+            <div class="tables-links-content">
+                <a class="tables-links-users" href="#">
+                    <p>User Table</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a> 
+            </div>
+            <div class="tables-links-content">
+                <a class="tables-links-models" href="#">
+                    <p>Models Table</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
 
 <?php include '../../includes/footer.php'; ?>

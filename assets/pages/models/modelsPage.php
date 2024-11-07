@@ -1,9 +1,3 @@
-<!-- /**
-    * Header
-    * 
-    * Contains the opening HTML markup, the <head> section, and the opening body tag.
-    * 
-*/ -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,6 +9,15 @@
     <title>VW: Volkswagen | Home</title>
 </head>
 <body>
-    <header class="header-default">
-        <?php include 'menu.php'; ?>
-    </header>
+   <header class="header-models-page">
+      <?php include '../../includes/menu.php'; ?>
+   </header>
+
+   <main>
+      <section class="titles">
+         <p class="models-title">Models</p>
+         <div class="line"></div>
+      </section>
+   </main>
+
+<?php include '../../includes/footer.php'; ?>

@@ -30,8 +30,16 @@ body {
 
 /* Header */
 
-header {
+.header-default {
    background-image: url("./../gfx/HomeBanner.png");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 60vh;
+}
+
+.header-models-page {
+   background-image: url("./../gfx/models-banner.png");
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
@@ -218,7 +226,7 @@ main .container-form .content-form .form .info-field-form {
    width: 100%;
    margin-bottom: 12px;
    border: 1px solid var(--grey100);
-   border-radius: 5px;
+   border-radius: 4px;
    padding: 0 12px;
 }
 main .container-form .content-form .form .info-field-form .toggle-password {
@@ -274,7 +282,7 @@ main .container-form .content-form .form button {
    background-color: var(--blue200);
    border: none;
    outline: none;
-   border-radius: 6px;
+   border-radius: 4px;
    cursor: pointer;
    transition: all .5s ease-in-out;
 }
@@ -403,6 +411,67 @@ section .content-card .container-ul-card .content-ul-card .container-li-card .co
 }
 
 /**
+   * Home
+   *
+   * This line of code is responsible for the home.
+   *
+*/
+main .line {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   height: 2px;
+   background-color: var(--grey100);
+   margin: 24px 0;
+}
+main .container-title-home {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   height: 100%;
+   background-color: var(--white100);
+}
+main .container-title-home .content-title-home {
+   display: flex;
+   align-items: center;
+   width: 80%;
+}
+main .container-title-home .content-title-home .links-models-home {
+   padding: 20px 40px;
+   border-radius: 4px;
+   text-decoration: none;
+   color: var(--white);
+   background-color: var(--blue200);
+   transition: all .5s ease-in-out;
+}
+main .container-title-home .content-title-home .links-models-home:hover {
+   background-color: var(--blue100);
+   transition: all .5s ease-in-out;
+}
+main .container-title-home .content-title-home .links-models-home p {
+   font-size: 16px;
+   font-weight: 600;
+}
+main .container-title-home .content-title-home.flex-start {
+   justify-content: flex-start;
+}
+main .container-title-home .content-title-home.flex-end{
+   justify-content: flex-end;
+}
+main .container-title-home .content-title-home .info-title-home .title-home {
+   font-size: 52px;
+   font-weight: 400;
+   color: var(--blue200);
+}
+main .container-title-home .content-title-home .info-title-home .subtitle-home {
+   font-size: 32px;
+   font-weight: 400;
+}
+
+/**
    * Dashboard
    *
    * This line of code is responsible for the dashboard.
@@ -427,9 +496,7 @@ main .titles .line {
    align-items: center;
    width: 80%;
    height: 2px;
-   background-color: #ccc;
-   /* margin-top: 24px;
-   margin-bottom: 24px; */
+   background-color: var(--grey100);
    margin: 24px 0;
 }
 main .dashboard-container {
@@ -563,6 +630,22 @@ main .tables-links-container .tables-links-content .tables-links-models:hover {
    transition: all .5s ease-in-out;
 }
 
+
+/**
+   * Models
+   *
+   * This line of code is responsible for the models.
+   *
+*/
+main .titles {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+main .titles .models-title {
+   font-size: 62px;
+   font-weight: 700;
+}
 /**
    * Footer 
    * 
@@ -766,6 +849,38 @@ footer .copyright {
    }
 
    /**
+      * Home
+      *
+      * This line of code is responsible for the home.
+      *
+   */
+   main .container-title-home {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+   }
+   main .container-title-home .content-title-home {
+      width: 100%;
+   }
+   main .container-title-home .content-title-home.flex-start, 
+   main .container-title-home .content-title-home.flex-end {
+      justify-content: flex-start;
+   }
+   main .container-title-home .content-title-home .links-models-home {
+      padding: 16px 32px;
+      margin-top: 24px;
+   }
+   main .container-title-home .content-title-home .info-title-home .title-home {
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--blue200);
+   }
+   main .container-title-home .content-title-home .info-title-home .subtitle-home {
+      font-size: 18px;
+      font-weight: 400;
+   }
+
+   /**
       * Dashboard responsive
       * 
       * This line of code is responsible for making the card dashboard responsive.
@@ -800,6 +915,22 @@ footer .copyright {
    }
    main .tables-links-container .tables-links-content .tables-links-models {
       margin: 12px 0px 0px 0px;
+   }
+
+   /**
+      * Models
+      *
+      * This line of code is responsible for the models.
+      *
+   */
+   main .titles {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   main .titles .models-title {
+      font-size: 62px;
+      font-weight: 700;
    }
 
    /**
