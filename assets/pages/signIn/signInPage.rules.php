@@ -47,7 +47,7 @@
     ];
 
     if ($user['adminUser'] === 1) {
-        header('Location: ../home/homePage.php');
+        header('Location: ../dashboard/dashboardPage.php');
     } else {
         header('Location: ../home/homePage.php');
     };

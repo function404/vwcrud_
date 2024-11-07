@@ -17,7 +17,7 @@
     <?php
         session_start();
 
-        if (isset($_SESSION['user']['adminUser']) === 1) {
+        if (isset($_SESSION['user']['admin']) === 1) {
             header('Location: ../home/homePage.php');
             exit();
         };

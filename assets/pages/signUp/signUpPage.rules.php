@@ -68,7 +68,7 @@
     ];
     
     if ($admin === 1) {
-        header('Location: ../home/homePage.php');
+        header('Location: ../dashboard/dashboardPage.php');
     } else {
         notify('success', 'User registered successfully!', '../signIn/signInPage');
     };

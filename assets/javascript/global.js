@@ -29,7 +29,7 @@ function toggleAdmin(){
    const admCheckbox = document.getElementById('adm');
    const adminKey = prompt("Enter a key to continue:");
 
-   if (adminKey === '28374192') {
+   if (adminKey === '40028922') {
       admCheckbox.setAttribute('aria-checked', 'true');
       admCheckbox.checked = true;
    } else {
