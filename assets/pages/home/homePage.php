@@ -21,11 +21,6 @@
     <h1>Home page</h1>
     <h4>Hello World!</h4>
     <p>This is <b>Home</b> page!</p>
-    <?php
-        if (isset($_SESSION['user'])) {
-            echo '<a href="?logout" class="logout">Logout</a>';
-        };
-    ?>
 </main>
 
 <?php include '../../includes/footer.php'?>

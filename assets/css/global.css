@@ -447,7 +447,7 @@ main .dashboard-container .dashboard-content .container-card {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   justify-content: space-around;
+   justify-content: flex-start;
    gap: 20px;
    max-width: 200px;
    max-height: 180px;

@@ -34,7 +34,9 @@
 
                 <div class="content-article-box logo-visble-web">
                     <article class="content-links">
-                        <img src="../../gfx/volkswagen-logo.png" alt="LOGO-VW">
+                        <a href="../home/homePage.php">
+                            <img src="../../gfx/volkswagen-logo.png" alt="LOGO-VW">
+                        </a>
                     </article>
                 </div>
 
@@ -60,9 +62,9 @@
             <section class="container-devs">
                 <p>Developers -
                     <a href="https://www.github.com/Felipe-G-Schmitt" target="_blank">@fepers</a>
-                    <i>(Felipe)</i>
+                    <i>(Felipe)</i> |
                     <a href="https://www.github.com/drypzz" target="_blank">@drypzz</a>
-                    <i>(Gustavo)</i>
+                    <i>(Gustavo)</i> |
                     <a href="https://www.github.com/function404" target="_blank">@function404</a>
                     <i>(Lincoln)</i>
                 </p>
