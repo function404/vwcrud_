@@ -135,14 +135,18 @@ main {
 }
 
 .nav-header {
-   display: none; /* Oculta a navegação inicialmente */
-   flex-direction: column; /* Organiza os ícones verticalmente */
+   display: none;
+   flex-direction: column;
 }
 
 .nav-header a {
-   text-decoration: none; /* Remove o sublinhado dos links */
-   color: #f4f4f4; /* Cor do texto */
-   margin-right: 15px; /* Espaçamento entre os ícones */
+   text-decoration: none;
+   color: #f4f4f4;
+   margin-right: 15px;
+}
+
+.nav-header a i {
+   margin-right: 5px;
 }
 
 
@@ -745,8 +749,16 @@ footer .copyright {
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.7);   
    }
 
+   .HeaderContainer .menu-header {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+   }
+
    .HeaderContainer .menu-header .SideBarHeader {
       display: block;
+      margin-right: 0;
    }
    
    .HeaderContainer .menu-header .SideBarHeader img{
@@ -802,6 +814,15 @@ footer .copyright {
       width: 30px;
       height: 30px;
       z-index: 1;
+   }
+
+   .nav-header a {
+      font-size: 16px;
+   }
+   
+   .nav-header a i {
+      font-size: 14px;
+      margin-right: 4px;
    }
 
    /*

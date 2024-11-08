@@ -28,14 +28,14 @@
                 Home
             </a>
             <?php
+                if (isset($_SESSION['user']) && $_SESSION['user']['admin'] === 1) {
+                    echo '<a href="../dashboard/dashboardPage.php"><i class="fa-solid fa-gear"></i>Dashboard</a>';
+                };
+
                 if (isset($_SESSION['user']['logged']) === true) {
                     echo '<a href="?logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>';
                 } else {
                     echo '<a href="../signIn/signInPage.php"><i class="fa-solid fa-user-large"></i>Sign In</a>';
-                };
-
-                if (isset($_SESSION['user']) && $_SESSION['user']['admin'] === 1) {
-                    echo '<a href="../dashboard/dashboardPage.php"><i class="fa-solid fa-gear"></i>Dashboard</a>';
                 };
             ?>
         </div>
