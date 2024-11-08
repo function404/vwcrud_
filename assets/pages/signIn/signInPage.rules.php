@@ -38,7 +38,7 @@
         'id' => $user['idUser'],
         'name' => $user['nameUser'],
         'email' => $user['emailUser'],
-        'admin' => $user['adminUser'],
+        'admin' => $user['adminUser'] ? 1 : 0,
         'logged' => true
     ];
 
