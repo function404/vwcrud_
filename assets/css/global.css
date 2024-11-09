@@ -334,6 +334,7 @@ main .container-form .btn-goback a:hover {
 /* MODELS */
 .title-models {
    margin-left: 50px;
+   margin-bottom: 10px;
    font-size: 20px;
 }
 
@@ -344,6 +345,15 @@ section {
    width: 100%;
    --outside-margin: 8.33vw;
 }
+
+.section-content-models{
+   margin: 50px 0;
+}
+
+.section-content-models:nth-child(1){
+   margin-top: 0;
+}
+
 section .content-card {
    display: block;
    position: relative;
@@ -988,6 +998,11 @@ footer .copyright {
       * This line of code is responsible for the models.
       *
    */
+
+   .title-models{
+      margin-left: 10px;
+   }
+
    main .titles {
       display: flex;
       justify-content: center;

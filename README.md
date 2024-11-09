@@ -2,7 +2,7 @@
 
 ## 📢 Informations
 
-- Vesion: 1.15.4
+- Vesion: 1.16.1
 
 - Last Update: 08 Nov. 2024
 

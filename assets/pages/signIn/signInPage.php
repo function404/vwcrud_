@@ -56,7 +56,7 @@
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" name="password" id="password" placeholder="Enter your password">
                         <a class="toggle-password" type="button" onclick="togglePassword()" >
-                            <i id="toggle-icon" class="fa-solid fa-eye"></i>
+                            <i id="toggle-icon" class="fa-solid fa-eye-slash"></i>
                         </a>
                     </div>
                     <button class="btn-form" type="submit">Sign In</button>
