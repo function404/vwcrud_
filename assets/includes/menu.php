@@ -15,7 +15,7 @@
     };
 ?>
 
-<div class="HeaderContainer">
+<div class="header-container">
     <div class="logo-header">
         <a href="../home/homePage.php">
             <image src="../../gfx/volkswagen-logoW.png" alt="White logo">
@@ -28,18 +28,18 @@
                 Home
             </a>
             <?php
-                if (isset($_SESSION['user']) && $_SESSION['user']['admin'] === 1) {
-                    echo '<a href="../dashboard/dashboardPage.php"><i class="fa-solid fa-gear"></i>Dashboard</a>';
-                };
-
                 if (isset($_SESSION['user']['logged']) === true) {
                     echo '<a href="?logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>';
                 } else {
                     echo '<a href="../signIn/signInPage.php"><i class="fa-solid fa-user-large"></i>Sign In</a>';
                 };
+
+                if (isset($_SESSION['user']) && $_SESSION['user']['admin'] === 1) {
+                    echo '<a href="../dashboard/dashboardPage.php"><i class="fa-solid fa-gear"></i>Dashboard</a>';
+                };
             ?>
         </div>
-        <div class="SideBarHeader">
+        <div class="side-bar-header">
             <input id="burger-checkbox" type="checkbox" />
             <label class="burger" for="burger-checkbox">
                 <span></span>
@@ -49,12 +49,12 @@
         </div>
     </div>
 </div>
-<div class="bottomHeader">
-    <div class="LineBefore"></div>
-        <div class="LogoReduced">
+<div class="bottom-header">
+    <div class="line-before"></div>
+        <div class="logo-reduced">
             <img src="../../gfx/volkswagen-logoW.png" alt="White logo">
         </div>
-    <div class="LineAfter"></div>
+    <div class="line-after"></div>
 </div>
 
 <script src="../../javascript/global.js"></script>
