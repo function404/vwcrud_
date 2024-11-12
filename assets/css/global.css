@@ -12,13 +12,20 @@
 }
 :root{
    --black: #000000;
-   --blue100: #09307C;
-   --blue100-variant: rgba(9, 48, 124, .3);
-   --blue200: #051E4F;
+
+   --blue100: rgba(9, 48, 124, 0.3);
+   --blue200: #809ACC;
+   --blue300: #09307C;
+   --blue400: #051E4F;
+
    --grey100: #D9D9D9;
    --grey200: #646464;
+
    --red100: #7c0909;
    --red200: #4f0505;
+   --red300: #CE2D1E;
+   --red400: #FFD3CF;
+
    --white: #FFFFFF;
    --white100: #F4F4F4;
 }
@@ -204,7 +211,7 @@ main .container-form .content-form h1 {
    justify-content: center;
    align-items: center;
    font-size: 54px;
-   color: var(--blue100);
+   color: var(--blue300);
    margin-bottom: 12px;
 }
 main .container-form .content-form p {
@@ -282,7 +289,7 @@ main .container-form .content-form .form button {
    height: 62px;
    font-size: 24px;
    color: var(--white);
-   background-color: var(--blue200);
+   background-color: var(--blue400);
    border: none;
    outline: none;
    border-radius: 4px;
@@ -290,7 +297,7 @@ main .container-form .content-form .form button {
    transition: all .5s ease-in-out;
 }
 main .container-form .content-form .form button:hover {
-   background-color: var(--blue100);
+   background-color: var(--blue300);
    transition: all .5s ease-in-out;
 }
 main .container-form .content-form .form p {
@@ -300,13 +307,13 @@ main .container-form .content-form .form p {
 }
 main .container-form .content-form .form p a {
    font-size: 16px;
-   color: var(--blue100);
+   color: var(--blue300);
    padding: 0 4px;
    text-decoration: none;
    transition: all .5s ease-in-out;
 }
 main .container-form .content-form .form p a:hover {
-   color: var(--blue100);
+   color: var(--blue300);
    text-decoration: underline;
    transition: all .5s ease-in-out;
 }
@@ -318,15 +325,15 @@ main .container-form .btn-goback {
 }
 main .container-form .btn-goback a {
    padding: 12px;
-   border: 2px solid var(--blue200);
+   border: 2px solid var(--blue400);
    border-radius: 50px;
    font-size: 16px;
-   color: var(--blue200);
+   color: var(--blue400);
    text-decoration: none;
    transition: all .5s ease-in-out;
 }
 main .container-form .btn-goback a:hover {
-   background-color: var(--blue200);
+   background-color: var(--blue400);
    color: var(--white);
    transition: all .5s ease-in-out;
 }
@@ -460,11 +467,11 @@ main .container-title-home .content-title-home .links-models-home {
    border-radius: 4px;
    text-decoration: none;
    color: var(--white);
-   background-color: var(--blue200);
+   background-color: var(--blue400);
    transition: all .5s ease-in-out;
 }
 main .container-title-home .content-title-home .links-models-home:hover {
-   background-color: var(--blue100);
+   background-color: var(--blue300);
    transition: all .5s ease-in-out;
 }
 main .container-title-home .content-title-home .links-models-home p {
@@ -480,12 +487,116 @@ main .container-title-home .content-title-home.flex-end{
 main .container-title-home .content-title-home .info-title-home .title-home {
    font-size: 52px;
    font-weight: 400;
-   color: var(--blue200);
+   color: var(--blue400);
 }
 main .container-title-home .content-title-home .info-title-home .subtitle-home {
    font-size: 32px;
    font-weight: 400;
 }
+
+/**
+   * List Users
+   *
+   * This line of code is responsible for the list of users.
+   *
+*/
+main .container-list-users {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   height: 100%;
+   margin-bottom: 24px;
+}
+main .container-list-users .container-table {
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+   text-align: center;
+}
+main .container-list-users .container-table .users-table {
+   width: 100%;
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+main .container-list-users .container-table .users-table td img {
+   width: 100px;
+   height: 50px;
+   object-fit: cover;
+}
+main .container-list-users .container-table .users-table th,
+main .container-list-users .container-table .users-table td {
+   text-align: center;
+   padding: 5px;
+   border: 2px solid var(--black);
+}
+main .container-list-users .container-table .users-table th {
+   background-color: var(--blue200);
+   color: var(--white);
+}
+main .container-list-users .container-table .users-table tr:nth-child(even) {
+   background-color: var(--blue100);
+   color: var(--black);
+   font-weight: bold;
+}
+main .container-list-users .container-table .users-table tr:nth-child(odd) {
+   background-color: var(--blue200);
+   color: var(--white);
+   font-weight: bold;
+}
+main .container-list-users .container-table .users-table.models th {
+   background-color: var(--red300);
+   color: var(--white);
+}
+main .container-list-users .container-table .users-table.models tr:nth-child(even) {
+   background-color: var(--red400);
+   color: var(--black);
+   font-weight: bold;
+}
+main .container-list-users .container-table .users-table.models tr:nth-child(odd) {
+   background-color: var(--red300);
+   color: var(--white);
+   font-weight: bold;
+}
+main .container-list-users .container-table .users-table .edit-btn,
+main .container-list-users .container-table .users-table .delete-btn {
+   font-size: 12px;
+   padding: 8px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: all .5s ease-in-out;
+   color: var(--white);
+}
+main .container-list-users .container-table .users-table .edit-btn {
+   background-color: var(--blue300);
+   margin-right: 5px;
+}
+main .container-list-users .container-table .users-table .delete-btn {
+   background-color: var(--red100);
+}
+main .btn-goback {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 24px;
+}
+main .btn-goback a {
+   padding: 12px 36px;
+   border: 2px solid var(--blue400);
+   border-radius: 50px;
+   font-size: 16px;
+   color: var(--blue400);
+   text-decoration: none;
+   transition: all .5s ease-in-out;
+}
+main .btn-goback a:hover {
+   background-color: var(--blue400);
+   color: var(--white);
+   transition: all .5s ease-in-out;
+}
+
 
 /**
    * Dashboard
@@ -562,10 +673,10 @@ main .dashboard-container .dashboard-content .card.small .box-icon-count i {
    font-size: 14px;
 }
 main .dashboard-container .dashboard-content .card.usuarios {
-   background-color: var(--blue200);
+   background-color: var(--blue400);
 }
 main .dashboard-container .dashboard-content .card.consumidor, .card.administrador {
-   background-color: var(--blue100);
+   background-color: var(--blue300);
 }
 main .dashboard-container .dashboard-content .card.modelos {
    background-color: var(--red200);
@@ -617,14 +728,14 @@ main .tables-links-container .tables-links-content .tables-links-users {
    align-items: center;
    margin: 0px 50px 0px 0px;
    border-radius: 4px;
-   background-color: var(--blue200);
+   background-color: var(--blue400);
    font-size: 16px;
    color: var(--white);
    text-decoration: none;
    transition: all .5s ease-in-out;
 }
 main .tables-links-container .tables-links-content .tables-links-users:hover {
-   background-color: var(--blue100);
+   background-color: var(--blue300);
    transition: all .5s ease-in-out;
 }
 main .tables-links-container .tables-links-content .tables-links-models {
@@ -671,7 +782,7 @@ main .titles .models-title {
 footer {
    text-align: center;
    padding: 10px 0;
-   border-top: 2px solid var(--blue100);
+   border-top: 2px solid var(--blue300);
 }
 footer .container-links {
    display: flex;
@@ -704,7 +815,7 @@ footer .container-links .content-article-box .content-links p a {
    transition: all .5s ease-in-out;
 }
 footer .container-links .content-article-box .content-links p a:hover {
-   color: var(--blue100);
+   color: var(--blue300);
    transition: all .5s ease-in-out;
 }
 footer .container-links .content-article-box .content-links i {
@@ -728,7 +839,7 @@ footer .container-devs p {
    color: var(--grey200);
 }
 footer .container-devs p a {
-   color: var(--blue100);
+   color: var(--blue300);
    text-decoration: none;
    transition: all .5s ease-in-out;
 }
@@ -760,14 +871,12 @@ footer .copyright {
       background-color: rgba(0, 0, 0, .5);
       box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);   
    }
-
    .header-container .menu-header {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
    }
-
    .header-container .menu-header {
       display: flex;
       justify-content: flex-end;
@@ -803,13 +912,46 @@ footer .copyright {
    #burger-checkbox:checked + .burger span:nth-child(3) {
       transform: translateY(-9px) rotate(-45deg);
    }
-   
+   .header-container .menu-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+   }
+   .header-container .menu-header .side-bar-header {
+      display: flex;
+      padding: 15px;
+      margin-right: 30px;
+   }
+   .burger {
+      display: inline-block;
+      cursor: pointer;
+      z-index: 1000;
+   }
+   .burger span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: #ffffff;
+      margin: 6px 0;
+      transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                  opacity 0.3s ease;
+   }
+   #burger-checkbox:checked + .burger span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+   }
+   #burger-checkbox:checked + .burger span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+   #burger-checkbox:checked + .burger span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+   } 
    .header-container .menu-header .side-bar-header img{
       width: 25px;
       height: 25px;
       object-fit: cover;
    }
-
    .bottom-header {
       display: flex;
       align-items: center;
@@ -818,20 +960,16 @@ footer .copyright {
       box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);   
       position: relative;;
    }
-
    .header-container .logo-header{
       display: none;
    }
-
    .bottom-header .logo-reduced{
       display: block;
    }
-
    .bottom-header .logo-reduced img{
       width: 20px;
       height: auto;
    }
-   
    .bottom-header 
    .line-before,
    .line-after {
@@ -840,34 +978,28 @@ footer .copyright {
       background-color: #f4f4f4;
       top: 50%;
       transform: translateY(-50%);
-   }
-   
+   } 
    .bottom-header .line-before {
       left: 0;
       width: calc(49% - 30px);
    }
-   
    .bottom-header .line-after {
       right: 0;
       width: calc(49% - 30px);
    }
-   
    .bottom-header img {
       margin-top: 5px;
       width: 30px;
       height: 30px;
       z-index: 1;
    }
-
    .nav-header a {
       font-size: 16px;
-   }
-   
+   } 
    .nav-header a i {
       font-size: 14px;
       margin-right: 4px;
    }
-
    /*
    .header-container .menu-header .nav-header{
       display: block;
@@ -890,7 +1022,6 @@ footer .copyright {
       * This line of code is responsible for making the card responsive.
       * 
    */
-
    section .content-card .container-ul-card {
       gap: 100px;
    }
@@ -948,13 +1079,45 @@ footer .copyright {
    main .container-title-home .content-title-home .info-title-home .title-home {
       font-size: 32px;
       font-weight: 400;
-      color: var(--blue200);
+      color: var(--blue400);
    }
    main .container-title-home .content-title-home .info-title-home .subtitle-home {
       font-size: 18px;
       font-weight: 400;
    }
 
+   /**
+      * List Users
+      *
+      * This line of code is responsible for the list of users.
+      *
+   */
+   main .container-list-users .container-table .users-table,
+   main .container-list-users .container-table .users-table th,
+   main .container-list-users .container-table .users-table td {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+
+   }
+   main .container-list-users .container-table .users-table tr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      border: none;
+   }
+   main .container-list-users .container-table .users-table td:last-child {
+      display: flex;
+      justify-content: center;
+   }
+   main .container-list-users .container-table .users-table .edit-btn,
+   main .container-list-users .container-table .users-table .delete-btn {
+      font-size: 16px;
+      padding: 6px;
+      width: 48%;
+   }
    /**
       * Dashboard responsive
       * 
@@ -998,11 +1161,9 @@ footer .copyright {
       * This line of code is responsible for the models.
       *
    */
-
    .title-models{
       margin-left: 10px;
    }
-
    main .titles {
       display: flex;
       justify-content: center;
@@ -1025,7 +1186,7 @@ footer .copyright {
       flex-direction: column;
       padding: 10px 20px 20px 20px;
       gap: 20px;
-      border-bottom: 2px solid var(--blue100-variant);
+      border-bottom: 2px solid var(--blue100);
    }
 
    footer .container-links .content-article-box{
@@ -1049,7 +1210,7 @@ footer .copyright {
       font-size: 20px;
       font-weight: 600;
       margin-left: 12px;
-      color: var(--blue200);
+      color: var(--blue400);
    }
    
 

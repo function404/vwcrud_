@@ -102,13 +102,13 @@
 
         <section class="tables-links-container">
             <div class="tables-links-content">
-                <a class="tables-links-users" href="#">
+                <a class="tables-links-users" href="../listUsers/listUsersPage.php">
                     <p>User Table</p>
                     <i class="fa-solid fa-chevron-right"></i>
                 </a> 
             </div>
             <div class="tables-links-content">
-                <a class="tables-links-models" href="#">
+                <a class="tables-links-models" href="../listModels/listModelsPage.php">
                     <p>Models Table</p>
                     <i class="fa-solid fa-chevron-right"></i>
                 </a>
