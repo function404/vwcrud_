@@ -156,6 +156,87 @@ main {
    margin-right: 5px;
 }
 
+/**
+   * Register
+   *
+   * This line of code is responsible for the register.
+   *
+*/
+main .form-toggle {
+   width: 50%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 10px;
+}
+main .form-toggle button {
+   width: 100%;
+   padding: 10px;
+   font-size: 16px;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+}
+main .form-toggle button.modelo {
+   background-color: var(--red200);
+   color: var(--white);
+}
+main .form-toggle button.chave {
+   background-color: var(--blue400);
+   color: var(--white);
+}
+main .container-register {
+   width: 500px;
+   background: #fff;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   text-align: center;
+   margin-top: 24px;
+}
+main .container-register .content-register {
+   margin: 20px 0;
+}
+main .container-register .content-register form label {
+   display: block;
+   margin-bottom: 5px;
+   text-align: left;
+   font-weight: bold;
+}
+main .container-register .content-register form input[type="text"], select {
+   width: 100%;
+   padding: 8px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+}
+main .container-register .content-register form input[type="file"] {
+   padding: 10px;
+}
+main .container-register .content-register form .buttons {
+   display: flex;
+   justify-content: space-between;
+}
+main .container-register .content-register form .buttons button {
+   width: 48%;
+   padding: 10px;
+   border-radius: 20px;
+   font-size: 16px;
+   cursor: pointer;
+}
+main .container-register .content-register form .buttons button .limpar {
+   background: none;
+   border: 2px solid #000;
+   color: #000;
+}
+main .container-register .content-register form .buttons button .cadastrar {
+   background-color: #3c0ca0;
+   color: #fff;
+   border: none;  
+}
+
 
 /**
    * Form 
@@ -704,13 +785,14 @@ main .dashboard-container .dashboard-content .card .box-icon-count {
    gap: 10px;
 }
 main .tables-links-container {
-   width: 50%;
+   width: 80%;
    height: 100%;
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
    margin: 24px 0;
+   gap: 24px;
 }
 main .tables-links-container .tables-links-content {
    width: 100%;
@@ -724,15 +806,15 @@ main .tables-links-container .tables-links-content .tables-links-users {
    width: 100%;
    height: 80px;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
-   margin: 0px 50px 0px 0px;
    border-radius: 4px;
    background-color: var(--blue400);
    font-size: 16px;
    color: var(--white);
    text-decoration: none;
    transition: all .5s ease-in-out;
+   padding: 24px;
 }
 main .tables-links-container .tables-links-content .tables-links-users:hover {
    background-color: var(--blue300);
@@ -742,21 +824,38 @@ main .tables-links-container .tables-links-content .tables-links-models {
    width: 100%;
    height: 80px;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
-   margin: 0px 0px 0px 50px;
    border-radius: 4px;
    background-color: var(--red200);
    font-size: 16px;
    color: var(--white);
    text-decoration: none;
    transition: all .5s ease-in-out;
+   padding: 24px;
 }
 main .tables-links-container .tables-links-content .tables-links-models:hover {
    background-color: var(--red100);
    transition: all .5s ease-in-out;
 }
-
+main .tables-links-container .tables-links-content .tables-links-register {
+   width: 100%;
+   height: 80px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 4px;
+   background-color: var(--blue400);
+   font-size: 16px;
+   color: var(--white);
+   text-decoration: none;
+   transition: all .5s ease-in-out;
+   padding: 24px;
+}
+main .tables-links-container .tables-links-content .tables-links-register:hover {
+   background-color: var(--blue300);
+   transition: all .5s ease-in-out;
+}
 
 /**
    * Models
@@ -918,11 +1017,6 @@ footer .copyright {
       align-items: center;
       width: 100%;
    }
-   .header-container .menu-header .side-bar-header {
-      display: flex;
-      padding: 15px;
-      margin-right: 30px;
-   }
    .burger {
       display: inline-block;
       cursor: pointer;
@@ -1000,21 +1094,17 @@ footer .copyright {
       font-size: 14px;
       margin-right: 4px;
    }
-   /*
-   .header-container .menu-header .nav-header{
-      display: block;
-   }
 
-   .header-container .menu-header .nav-header a{
-      text-decoration: none;
-      color: #f4f4f4;
-      margin-right: 15px;
-   }
-
-   .header-container .menu-header .nav-header a i{
-      font-size: 20px;
-   }
+   /**
+      * Register
+      *
+      * This line of code is responsible for the register.
+      *
    */
+   main .container-register {
+      width: 350px;
+   }
+
 
    /**
       * Card responsive
@@ -1147,12 +1237,6 @@ footer .copyright {
       justify-content: center;
       align-items: center;
       margin: 24px 0;
-   }
-   main .tables-links-container .tables-links-content .tables-links-users {
-      margin: 0px 0px 12px 0px;
-   }
-   main .tables-links-container .tables-links-content .tables-links-models {
-      margin: 12px 0px 0px 0px;
    }
 
    /**

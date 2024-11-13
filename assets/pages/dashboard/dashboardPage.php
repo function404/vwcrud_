@@ -113,6 +113,12 @@
                     <i class="fa-solid fa-chevron-right"></i>
                 </a>
             </div>
+            <div class="tables-links-content">
+                <a class="tables-links-register" href="../register/registerPage.php">
+                    <p>Register Page</p>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a> 
+            </div>
         </section>
     </main>
 
