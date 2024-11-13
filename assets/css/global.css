@@ -35,6 +35,103 @@ body {
    background-color: var(--white100);
 }
 
+/* modal */
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-content {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.modal .modal-content form{
+   width: 500px;
+   background: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}
+
+.modal .modal-content form div{
+   width: 100%;
+}
+
+.modal .modal-content form div label {
+   display: block;
+   margin-bottom: 5px;
+   margin-top: 5px;
+   text-align: left;
+   font-weight: bold;
+}
+
+.modal .modal-content form div input, .modal .modal-content form div select{
+   width: 100%;
+   padding: 8px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+}
+
+.modal .modal-content form div input[type="file"]{
+   cursor: pointer;
+}
+
+.modal .modal-content form div input[type="color"]{
+   height: 50px;
+}
+
+.modal .modal-content form div .flex-btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   text-align: center;
+}
+
+.modal .modal-content form div .flex-btn div button{
+   width: 120px;
+   padding: 8px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all .3s ease-in-out;
+}
+
+.modal .modal-content form div .flex-btn div button.submit-btn{
+   background-color: var(--blue200);
+   color: var(--white);
+}
+
+.modal .modal-content form div .flex-btn div button.submit-btn:hover{
+   background-color: var(--blue300);
+}
+
+.modal .modal-content form div .flex-btn div button.close-btnUser, .modal .modal-content form div .flex-btn div button.close-btnModel{
+   background-color: var(--red200);
+   color: var(--white);
+}
+
+.modal .modal-content form div .flex-btn div button.close-btnUser:hover, .modal .modal-content form div .flex-btn div button.close-btnModel:hover{
+   background-color: var(--red300);
+}
+
 /* Header */
 
 .header-default {
@@ -165,6 +262,7 @@ main {
 main .form-toggle {
    width: 50%;
    margin: 0 auto;
+   margin-bottom: 30px;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -172,39 +270,72 @@ main .form-toggle {
 }
 main .form-toggle button {
    width: 100%;
-   padding: 10px;
+   padding: 15px;
    font-size: 16px;
    border: none;
-   border-radius: 20px;
+   border-radius: 4px;
    cursor: pointer;
+   transition: all .3s ease-in-out;
 }
+
 main .form-toggle button.modelo {
    background-color: var(--red200);
    color: var(--white);
+   opacity: 1;
+   cursor: pointer;
 }
+
+main .form-toggle button.modelo.active{
+   opacity: .5;
+   cursor: not-allowed;
+}
+
+main .form-toggle button.modelo:hover {
+   background-color: var(--red100);
+}
+
 main .form-toggle button.chave {
    background-color: var(--blue400);
    color: var(--white);
+   opacity: 1;
+   cursor: pointer;
 }
+
+main .form-toggle button.chave.active{
+   opacity: .5;
+   cursor: not-allowed;
+}
+
+main .form-toggle button.chave:hover {
+   background-color: var(--blue300);
+}
+
 main .container-register {
-   width: 500px;
+   width: 600px;
    background: #fff;
    padding: 20px;
+   margin: 0 auto;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    border-radius: 10px;
    text-align: center;
-   margin-top: 24px;
 }
-main .container-register .content-register {
-   margin: 20px 0;
+
+main .container-register .content-register h2{
+   margin-bottom: 10px;
 }
+
 main .container-register .content-register form label {
    display: block;
    margin-bottom: 5px;
+   margin-top: 5px;
    text-align: left;
    font-weight: bold;
 }
-main .container-register .content-register form input[type="text"], select {
+main .container-register .content-register form input[type="text"],
+main .container-register .content-register form input[type="number"],
+main .container-register .content-register form input[type="file"],
+main .container-register .content-register form input[type="color"],
+main .container-register .content-register form select {
    width: 100%;
    padding: 8px;
    margin-bottom: 15px;
@@ -212,25 +343,74 @@ main .container-register .content-register form input[type="text"], select {
    border-radius: 5px;
    box-sizing: border-box;
 }
-main .container-register .content-register form input[type="file"] {
-   padding: 10px;
-}
-main .container-register .content-register form .buttons {
-   display: flex;
-   justify-content: space-between;
-}
-main .container-register .content-register form .buttons button {
-   width: 48%;
-   padding: 10px;
-   border-radius: 20px;
-   font-size: 16px;
+
+main .container-register .content-register form input[type="file"]{
    cursor: pointer;
 }
-main .container-register .content-register form .buttons button .limpar {
+
+main .container-register .content-register form input[type="color"] {
+   appearance: none;
+   -webkit-appearance: none;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   height: 50px;
+   padding: 5px;
+   cursor: pointer;
+   transition: all .3s ease-in-out;
+}
+
+main .container-register .content-register form input[type="color"]:hover {
+   border-color: #007bff;
+}
+
+main .container-register .content-register form input[type="color"]::-webkit-color-swatch-wrapper {
+   padding: 0;
+}
+
+main .container-register .content-register form input[type="color"]::-webkit-color-swatch {
+   border: none;
+   border-radius: 5px;
+}
+
+main .container-register .content-register form input[type="file"]::file-selector-button {
+   background: #f9f9f9;
+   padding: 5px 15px;
+   border: 1px solid #ccc;
+   cursor: pointer;
+   transition: all .3s ease-in-out;
+}
+
+main .container-register .content-register form input[type="file"]::file-selector-button:hover {
+   background: #f0f0f0;
+}
+
+main .container-register .content-register form .buttons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+main .container-register .content-register form .buttons button {
+   width: 100%;
+   height: 50px;
+   font-size: 20px;
+   color: var(--white);
+   background-color: var(--blue400);
+   border: none;
+   outline: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: all .5s ease-in-out;
+}
+
+main .container-register .content-register form .buttons button:hover{
+   background-color: var(--blue300);
+}
+
+/* main .container-register .content-register form .buttons button .limpar {
    background: none;
    border: 2px solid #000;
    color: #000;
-}
+} */
 main .container-register .content-register form .buttons button .cadastrar {
    background-color: #3c0ca0;
    color: #fff;
@@ -267,21 +447,21 @@ main .container-form {
    background-color: var(--white);
    box-shadow: -4px 4px 2px 1px rgba(0, 0, 0, 0.4);
 }
-main .container-form .content-form .error{
+main .container-form .content-form .error, .container-register .error{
    width: 100%;
    background-color: rgba(255, 0, 0, .1);
 }
-main .container-form .content-form .success{
+main .container-form .content-form .success, .container-register .success{
    width: 100%;
    background-color: rgba(0, 255, 0, .1);
 }
-main .container-form .content-form .error p{
+main .container-form .content-form .error p, .container-register .error p{
    color: red;
    font-size: 16px;
    text-align: center;
    padding: 10px;
 }
-main .container-form .content-form .success p{
+main .container-form .content-form .success p, .container-register .success p{
    color: green;
    font-size: 16px;
    text-align: center;
@@ -954,6 +1134,17 @@ footer .copyright {
 }
 
 @media screen and (max-width: 960px) {
+
+  /**
+      * Modal
+      * 
+      * This line of code is responsible for the modal.
+      * 
+   */
+   .modal .modal-content form{
+      width: 90%;
+   }
+
    /**
       * Header responsive
       * 
@@ -1102,7 +1293,7 @@ footer .copyright {
       *
    */
    main .container-register {
-      width: 350px;
+      width: 90%;
    }
 
 

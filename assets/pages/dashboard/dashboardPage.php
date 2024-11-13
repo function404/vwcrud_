@@ -39,7 +39,7 @@
                         <i class='fa-solid fa-user'></i>
                         <p class='count'><?php echo $allusers; ?></p>
                     </div>
-                    <div class='label'>Users</div>
+                    <div class='label'>All Users</div>
                 </div>
 
                 <div class="container-card">
@@ -64,7 +64,7 @@
                         <i class="fa-solid fa-car"></i>
                         <p class="count"><?php echo $allmodels; ?></p>
                     </div>
-                    <div class="label">Models</div>
+                    <div class="label">All Models</div>
                 </div>
                 
                 <div class="container-card">

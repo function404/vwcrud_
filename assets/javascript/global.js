@@ -73,3 +73,84 @@ function toggleNavbar() {
 }
 
 document.querySelector('#burger-checkbox').addEventListener('click', toggleNavbar);
+
+
+/**
+ * Change register visibility
+ *
+*/
+document.addEventListener('DOMContentLoaded', () => {
+   const vehicleButton = document.querySelector('.modelo');
+   const keyButton = document.querySelector('.chave');
+   const vehicleSection = document.getElementById('register1');
+   const keySection = document.getElementById('register2');
+
+   const model = document.querySelector('.modelo');
+   const key = document.querySelector('.chave');
+
+   vehicleButton.addEventListener('click', () => {
+      vehicleSection.style.display = 'block';
+      vehicleSection.classList.add('active');
+      model.classList.add('active');
+      keySection.style.display = 'none';
+      keySection.classList.remove('active');
+      key.classList.remove('active');
+   });
+
+   keyButton.addEventListener('click', () => {
+      vehicleSection.style.display = 'none';
+      vehicleSection.classList.remove('active');
+      model.classList.remove('active');
+      keySection.style.display = 'block';
+      keySection.classList.add('active');
+      key.classList.add('active');
+   });
+});
+
+
+/**
+ * Change visibility of the modal to edit user
+ *
+*/
+function openEditModal(id, name, email) {
+   document.getElementById('userId').value = id;
+   document.getElementById('userName').value = name;
+   document.getElementById('userEmail').value = email;
+   
+   document.getElementById('editModalUser').style.display = 'block';
+}
+
+document.querySelector('.close-btnUser').onclick = function() {
+   document.getElementById('editModalUser').style.display = 'none';
+};
+
+window.onclick = function(event) {
+   if (event.target == document.getElementById('editModalUser')) {
+       document.getElementById('editModalUser').style.display = 'none';
+   }
+};
+
+
+/**
+ * Change visibility of the modal to edit model
+ *
+*/
+function openEditModal2(id, name, type, color, availability) {
+   document.getElementById('modelId').value = id;
+   document.getElementById('modelName').value = name;
+   document.getElementById('modelType').value = type;
+   document.getElementById('modelColor').value = color;
+   document.getElementById('modelAvailability').value = availability;
+
+   document.getElementById('editModalModel').style.display = 'block';
+}
+
+document.querySelector('.close-btnModel').onclick = function() {
+   document.getElementById('editModalModel').style.display = 'none';
+};
+
+window.onclick = function(event) {
+   if (event.target == document.getElementById('editModalModel')) {
+       document.getElementById('editModalModel').style.display = 'none';
+   }
+};

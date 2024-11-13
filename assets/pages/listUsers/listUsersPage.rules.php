@@ -22,5 +22,20 @@
       $sql->bindParam(':id', $id);
       $sql->execute();
       header('Location: listUsersPage.php');
-  };
+   };
+
+   if (isset($_POST['updateUser'])) {
+      $id = $_POST['id'];
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+
+      $query = $pdo->prepare('UPDATE users SET nameUser = :name, emailUser = :email WHERE idUser = :id');	
+      $query->bindParam(':id', $id);
+      $query->bindParam(':name', $name);
+      $query->bindParam(':email', $email);
+      $query->execute();
+
+      header('Location: listUsersPage.php');
+      exit();
+   };
 ?>

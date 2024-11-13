@@ -42,7 +42,7 @@
         'logged' => true
     ];
 
-    if ($user['adminUser'] === 1) {
+    if ($_SESSION['user']['admin'] == 1) {
         header('Location: ../dashboard/dashboardPage.php');
         exit();
     }else{

@@ -44,7 +44,18 @@
                         <td><img src="data:image/jpeg;base64,<?php echo $value['img'] ?>" alt="dsadsad"></td> 
                         <td><?php echo $value['availability'] ?></td>
                         <td>
-                            <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                        <button 
+                            type="button" 
+                            class="edit-btn" 
+                            onclick="openEditModal2(
+                                '<?php echo $value['id']; ?>', 
+                                '<?php echo $value['name']; ?>', 
+                                '<?php echo $value['type']; ?>', 
+                                '<?php echo $value['color']; ?>', 
+                                '<?php echo $value['availability']; ?>'
+                            )">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
                             <button onclick="window.location.href = './listModelsPage.rules.php?delete=<?php echo $value['id']; ?>'" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
                         </td>
                     </tr>
@@ -52,6 +63,8 @@
             </table>
         </div>
     </section>
+
+    <?php include '../../includes/modalModel.php' ?>
     
     <section class="btn-goback">
         <a href="../dashboard/dashboardPage.php">Go back</a>
