@@ -16,6 +16,7 @@ Project carried out during the 2nd semester of ADS (Systems Analysis and Develop
 - css
 - xampp
 - html
+- javascript
 
 ## 💻 Developers Team
 

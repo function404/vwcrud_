@@ -60,7 +60,7 @@ body {
    width: 500px;
    background: #fff;
    padding: 20px;
-   border-radius: 10px;
+   border-radius: 4px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -115,12 +115,12 @@ body {
 }
 
 .modal .modal-content form div .flex-btn div button.submit-btn{
-   background-color: var(--blue200);
+   background-color: var(--blue300);
    color: var(--white);
 }
 
 .modal .modal-content form div .flex-btn div button.submit-btn:hover{
-   background-color: var(--blue300);
+   background-color: var(--blue200);
 }
 
 .modal .modal-content form div .flex-btn div button.close-btnUser, .modal .modal-content form div .flex-btn div button.close-btnModel{
@@ -933,7 +933,7 @@ main .dashboard-container .dashboard-content .card.large .box-icon-count i {
 main .dashboard-container .dashboard-content .card.small .box-icon-count i {
    font-size: 14px;
 }
-main .dashboard-container .dashboard-content .card.usuarios {
+main .dashboard-container .dashboard-content .card.users {
    background-color: var(--blue400);
 }
 main .dashboard-container .dashboard-content .card.consumidor, .card.administrador {

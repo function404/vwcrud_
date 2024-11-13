@@ -34,7 +34,7 @@
         <section class="dashboard-container">
             <div class="dashboard-content">
                 
-                <div class='card usuarios large'>
+                <div class='card users large'>
                     <div class='box-icon-count'>
                         <i class='fa-solid fa-user'></i>
                         <p class='count'><?php echo $allusers; ?></p>

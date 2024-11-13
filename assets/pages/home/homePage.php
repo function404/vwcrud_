@@ -20,7 +20,7 @@
     <section class="container-title-home">
         <article class="content-title-home flex-start">
             <div class="info-title-home">
-                <p class="title-home">Hello, <?php echo $_SESSION['user']['name'] ?? 'Usuario' ?>!</p>
+                <p class="title-home">Hello, <?php echo $_SESSION['user']['name'] ?? 'Everyone' ?>!</p>
                 <p class="subtitle-home">Welcome!</p>
             </div>
         </article>
