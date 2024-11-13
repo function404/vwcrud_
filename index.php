@@ -5,7 +5,7 @@
     *
 */ -->
 <?php
-    header("Location: "."./assets/pages/homePage.php");
+    header("Location: "."./assets/pages/home/homePage.php");
     exit;
 ?>
     

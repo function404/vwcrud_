@@ -8,48 +8,63 @@
         <footer>
             <section class="container-links">
                 <article class="content-visible-mobile">
-                    <img src="../gfx/volkswagen-logo.png" alt="LOGO-VW">
-                    <p class="p-visible-mobile">Volkswagen</p>
-                </article>
-                <article class="content-links">
-                    <i class="fa-regular fa-comments"></i>
-                    <p>
-                        <a href="#">WhatsApp</a>
-                    </p>
+                    <a href="../home/homePage.php">
+                        <img src="../../gfx/volkswagen-logo.png" alt="LOGO-VW">
+                    </a>
+                    <p class="p-visible-mobile">Volkswagen Das Auto</p>
                 </article>
 
-                <article class="content-links">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>
-                        <a href="#">Nearby dealerships</a>
-                    </p>
-                </article>
+                <div class="content-article-box">
+                    <article class="content-links">
+                        <i class="fa-solid fa-comment"></i>
+                        <p>
+                            <a href="#">WhatsApp</a>
+                        </p>
+                    </article>
+                </div>
 
-                <article class="content-links logo-visble-web">
-                    <img src="../gfx/volkswagen-logo.png" alt="LOGO-VW">
-                </article>
+                <div class="content-article-box">
+                    <article class="content-links">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>
+                            <a href="#">Nearby dealerships</a>
+                        </p>
+                    </article>
+                </div>
 
-                <article class="content-links">
-                    <i class="fa-regular fa-percent"></i>
-                    <p>
-                        <a href="#">Vehicle offers</a>
-                    </p>
-                </article>
+                <div class="content-article-box logo-visble-web">
+                    <article class="content-links">
+                        <a href="../home/homePage.php">
+                            <img src="../../gfx/volkswagen-logo.png" alt="LOGO-VW">
+                        </a>
+                    </article>
+                </div>
 
-                <article class="content-links">
-                    <i class="fa-solid fa-car"></i>
-                    <p>
-                        <a href="#">All models</a>
-                    </p>
-                </article>
+                <div class="content-article-box">
+                    <article class="content-links">
+                        <i class="fa-solid fa-tags"></i>
+                        <p>
+                            <a href="#">Vehicle offers</a>
+                        </p>
+                    </article>
+                </div>
+
+                <div class="content-article-box">
+                    <article class="content-links">
+                        <i class="fa-solid fa-car"></i>
+                        <p>
+                            <a href="#">All models</a>
+                        </p>
+                    </article>
+                </div>
             </section>
 
             <section class="container-devs">
                 <p>Developers -
                     <a href="https://www.github.com/Felipe-G-Schmitt" target="_blank">@fepers</a>
-                    <i>(Felipe)</i>
+                    <i>(Felipe)</i> |
                     <a href="https://www.github.com/drypzz" target="_blank">@drypzz</a>
-                    <i>(Gustavo)</i>
+                    <i>(Gustavo)</i> |
                     <a href="https://www.github.com/function404" target="_blank">@function404</a>
                     <i>(Lincoln)</i>
                 </p>
