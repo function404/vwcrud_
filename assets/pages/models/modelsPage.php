@@ -54,6 +54,9 @@
                                                     <div class="img-li-card">
                                                         <img src="data:image/jpeg;base64,<?php echo $model['img']; ?>" title="<?php echo $model['name']; ?>" alt="<?php echo $model['name']; ?>">
                                                     </div>
+                                                    <div style="position: relative; top: 170px; text-transform: capitalize; font-weight: bold; font-size: 1.2rem;">
+                                                        <span><?php echo $model['name']?></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

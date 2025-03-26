@@ -632,7 +632,7 @@ section .content-card .container-ul-card {
    flex-direction: row;
    width: 100%;
    flex-wrap: wrap;
-   gap: 70px;
+   gap: 120px;
    padding: 0 8.33vw;
    scrollbar-width: none; 
    justify-content: center;
